@@ -9,12 +9,14 @@ public class cshPointerEvent : MonoBehaviour
     public Image LoadingBar;
     private bool gazedAt;
     private float barTime = 0.0f;
+    public bool sw;
 
     // Start is called before the first frame update
     void Start()
     {
         gazedAt = false;
         LoadingBar.fillAmount = 0;
+        sw = false;
     }
 
     // Update is called once per frame
@@ -27,6 +29,10 @@ public class cshPointerEvent : MonoBehaviour
                 barTime += Time.deltaTime;
             }
             LoadingBar.fillAmount = barTime / 5.0f;
+            if (LoadingBar.fillAmount == 1f)
+            {
+                sw = true;
+            }
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -45,6 +51,7 @@ public class cshPointerEvent : MonoBehaviour
         {
             Debug.Log("Out");
             LoadingBar.fillAmount = 0;
+            sw = false;
         }
     }
 }
