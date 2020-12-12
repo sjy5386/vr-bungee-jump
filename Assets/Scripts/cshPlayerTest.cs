@@ -35,7 +35,7 @@ public class cshPlayerTest : MonoBehaviour
         {
             transform.Translate(transform.up * speed * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.C))
         {
             transform.Translate(transform.up * -speed * Time.deltaTime);
         }
