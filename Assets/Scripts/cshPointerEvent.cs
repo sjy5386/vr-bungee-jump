@@ -10,6 +10,7 @@ public class cshPointerEvent : MonoBehaviour
     private bool gazedAt;
     private float barTime = 0.0f;
     public bool sw;
+    public bool enab;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,7 @@ public class cshPointerEvent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gazedAt)
+        if (enab && gazedAt)
         {
             if (barTime <= 5.0f)
             {
@@ -39,6 +40,7 @@ public class cshPointerEvent : MonoBehaviour
             Application.Quit();
         }
     }
+
     public void SetGazedAt(bool gazedAt)
     {
         this.gazedAt = gazedAt;

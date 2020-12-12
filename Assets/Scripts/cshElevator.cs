@@ -24,6 +24,7 @@ public class cshElevator : MonoBehaviour
         if (cshPlayerStatus.equipment && cshPointerEvent.sw)
         {
             sw = true;
+            cshPointerEvent.enab = false;
         }
         if (sw && (transform.position.y < 102.5f))
         {

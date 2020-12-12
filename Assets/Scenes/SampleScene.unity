@@ -1364,6 +1364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LoadingBar: {fileID: 979898729}
   sw: 0
+  enab: 1
 --- !u!114 &1241587187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1784,6 +1785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LoadingBar: {fileID: 979898729}
   sw: 0
+  enab: 0
 --- !u!1 &1569368629
 GameObject:
   m_ObjectHideFlags: 0
@@ -1970,6 +1972,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LoadingBar: {fileID: 979898729}
   sw: 0
+  enab: 0
 --- !u!1 &1782336293
 GameObject:
   m_ObjectHideFlags: 0
