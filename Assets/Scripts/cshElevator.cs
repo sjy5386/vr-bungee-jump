@@ -10,6 +10,7 @@ public class cshElevator : MonoBehaviour
     public GameObject Player;
     public bool sw;
     private float speed = 5.0f;
+    private float maxY = 103.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -33,10 +34,14 @@ public class cshElevator : MonoBehaviour
             {
                 Player.transform.Translate(transform.forward * 2.0f * Time.deltaTime);
             }
-            if ((Player.transform.position.z >= transform.position.z) && (transform.position.y < 103.0f))
+            if ((Player.transform.position.z >= transform.position.z) && (transform.position.y < maxY))
             {
                 transform.Translate(transform.up * speed * Time.deltaTime);
                 Player.transform.Translate(transform.up * speed * Time.deltaTime);
+            }
+            if ((transform.position.y >= maxY) && (Player.transform.position.z < 38.5f))
+            {
+                Player.transform.Translate(transform.forward * 2.0f * Time.deltaTime);
             }
         }
     }
