@@ -7,6 +7,7 @@ public class cshElevator : MonoBehaviour
     private cshPlayerStatus cshPlayerStatus;
     private cshPointerEvent cshPointerEvent;
 
+    public GameObject Player;
     public bool sw;
     private float speed = 10.0f;
 
@@ -26,9 +27,17 @@ public class cshElevator : MonoBehaviour
             sw = true;
             cshPointerEvent.enab = false;
         }
-        if (sw && (transform.position.y < 102.5f))
+        if (sw)
         {
-            transform.Translate(transform.up * speed * Time.deltaTime);
+            if (Player.transform.position.z < transform.position.z)
+            {
+                Player.transform.Translate(transform.forward * 2.0f * Time.deltaTime);
+            }
+            if ((Player.transform.position.z >= transform.position.z) && (transform.position.y < 102.5f))
+            {
+                transform.Translate(transform.up * speed * Time.deltaTime);
+                Player.transform.Translate(transform.up * speed * Time.deltaTime);
+            }
         }
     }
 }
