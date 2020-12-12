@@ -25,11 +25,11 @@ public class cshPointerEvent : MonoBehaviour
     {
         if (enab && gazedAt)
         {
-            if (barTime <= 5.0f)
+            if (barTime <= 3.0f)
             {
                 barTime += Time.deltaTime;
             }
-            LoadingBar.fillAmount = barTime / 5.0f;
+            LoadingBar.fillAmount = barTime / 3.0f;
             if (LoadingBar.fillAmount == 1f)
             {
                 sw = true;
