@@ -13,7 +13,7 @@ public class cshPlayerStatus : MonoBehaviour
     void Start()
     {
         equipment = false;
-        equipmentPointerEvent = GameObject.Find("Structure").GetComponent<cshPointerEvent>();
+        equipmentPointerEvent = GameObject.Find("Equipments").GetComponent<cshPointerEvent>();
         elevatorPointEvent = GameObject.Find("Room").GetComponent<cshPointerEvent>();
     }
 
