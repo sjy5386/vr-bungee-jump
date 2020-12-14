@@ -33,6 +33,7 @@ public class cshPointerEvent : MonoBehaviour
             if (LoadingBar.fillAmount == 1f)
             {
                 sw = true;
+                LoadingBar.fillAmount = 0;
             }
         }
         if (Input.GetKeyDown(KeyCode.Escape))
